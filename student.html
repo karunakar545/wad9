@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+ <title>student</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head><body align="center" bgcolor="orange">
+<div ng-app="greetingApp" ng-controller="GreetingController">
+    <label for="studentName">Enter Student's Name:</label>
+    <input type="text" id="studentName" ng-model="studentName" placeholder="Enter student's name">
+    <p ng-if="studentName">Hello, {{ studentName }}!</p>
+</div>
+<script>
+    var app = angular.module('greetingApp', []);
+    app.controller('GreetingController', function($scope) {
+        $scope.studentName = "";
+    });
+</script></body>
+</html>
